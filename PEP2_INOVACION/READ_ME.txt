@@ -46,7 +46,11 @@ B) PARA FACILITAR EJECUCIÓN DEL CODIGO, SE HACE ENTREGA DE LAS LINEAS UTILIZADA
 
 -------------------------------------------------------------------------------------------------------------------------------
 4°) PARA INGRESAR A LA INTERFAZ GRAFICA, ES NECESARIO VERIFICAR EN LA TERMINAL UNA VEZ SE EJECUTÓ EL CODIGO CORRECTAMENTE. 
+    
+   - HAY DOS OPCIONES PARA ACCEDER A ESTA:
 
-    - LA DIRECCIÓN ES ENTREGADA DE LA FORMA http://
+    	a) LA DIRECCIÓN ES ENTREGADA DE LA FORMA http://
+
+    	b) INGRESAR A: http://localhost:4000
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
