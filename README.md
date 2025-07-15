@@ -46,7 +46,7 @@ database = mysql.connector.connect(
 ## --------------------------------------------------------------------------------------------------------
 ## 4°) PARA INGRESAR A LA INTERFAZ GRAFICA, ES NECESARIO VERIFICAR EN LA TERMINAL UNA VEZ SE EJECUTÓ EL CODIGO CORRECTAMENTE. 
     
-   - HAY DOS OPCIONES PARA ACCEDER A ESTA:
+   - HAY DOS OPCIONES PARA ACCEDER A ESTA UNA VEZ EL CODIGO ESTÁ EN EJECUCIÓN:
 
     	a) LA DIRECCIÓN ES ENTREGADA DE LA FORMA http://
 
