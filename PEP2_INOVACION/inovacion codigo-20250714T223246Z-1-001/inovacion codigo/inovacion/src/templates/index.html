@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+    <h1 class="text-center mt-5 mb-5 text-primary">Registro de Usuarios</h1>
+
+    <div class="container">
+        <div class="card shadow">
+            <div class="card-body">
+                <h5 class="text-center">Parámetros de entrada</h5>
+                <form action="/user" method="POST">
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label>RUT</label>
+                            <input type="text" class="form-control mb-3" name="rut" required>
+                        </div>
+                        <div class="col">
+                            <label>Nombre</label>
+                            <input type="text" class="form-control mb-3" name="name" required>
+                        </div>
+                        <div class="col">
+                            <label>Apellido</label>
+                            <input type="text" class="form-control mb-3" name="lastname" required>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-primary mb-3 mt-4" type="submit">Guardar</button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Tabla -->
+                <h5 class="text-center">Tabla de datos</h5>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">RUT</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellido</th>
+                            <th scope="col">Editar</th>
+                            <th scope="col">Eliminar</th>
+                            <th scope="col">Preguntar</th>
+                            <th scope="col">Ver Preguntas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for d in data %}
+                    <tr>
+                        <td>{{ d.id }}</td>
+                        <td>{{ d.rut }}</td>
+                        <td>{{ d.name }}</td>
+                        <td>{{ d.lastname }}</td>
+                        <td>
+                            <button class="btn btn-primary btn-sm" id="btn-edit{{ d.id }}" data-bs-toggle="modal" data-bs-target="#modalEdit{{ d.id }}">Editar</button>
+                        </td>
+                        <td>
+                            <a href="{{ url_for('delete', id=d.id) }}" class="btn btn-danger btn-sm">Eliminar</a>
+                        </td>
+                        <td>
+                            <button class="btn btn-success btn-sm" id="btn-add-question{{ d.id }}" data-bs-toggle="modal" data-bs-target="#modalQuestion{{ d.id }}">Agregar Pregunta</button>
+                        </td>
+                        <td>
+                            <a href="{{ url_for('getQuestions', user_id=d.id) }}" class="btn btn-warning btn-sm">Ver Preguntas</a>
+                        </td>
+                    </tr>
+
+                    <!-- Modal para editar -->
+                    <div class="modal fade" id="modalEdit{{ d.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Editar Usuario</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="/edit/{{ d.id }}" method="POST">
+                                        <label>RUT</label>
+                                        <input type="text" class="form-control mb-3" name="rut" value="{{ d.rut }}" required>
+                                        <label>Nombre</label>
+                                        <input type="text" class="form-control mb-3" name="name" value="{{ d.name }}" required>
+                                        <label>Apellido</label>
+                                        <input type="text" class="form-control mb-3" name="lastname" value="{{ d.lastname }}" required>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                                </div>
+                                    </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal para agregar pregunta -->
+                    <div class="modal fade" id="modalQuestion{{ d.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Agregar Pregunta</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="/question" method="POST">
+                                        <input type="hidden" name="user_id" value="{{ d.id }}">
+                                        <label>Texto de la Pregunta</label>
+                                        <input type="text" class="form-control mb-3" name="question_text" placeholder="Escribe la pregunta" required>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-success">Agregar Pregunta</button>
+                                </div>
+                                    </form>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    </tbody>
+                </table>                                 
+            </div>
+        </div>
+    </div>
+</body>
+</html>

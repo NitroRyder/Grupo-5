@@ -1,0 +1,550 @@
+[
+  {
+    "tipo": "Problemas de pago a empleados",
+    "prioridad": [65, 100],
+    "contexto": [
+      "El trabajador no recibió su pago a tiempo.",
+      "El pago fue incorrecto o incompleto.",
+      "El trabajador no recibió el bono prometido.",
+      "El trabajador no recibió el pago por horas extras.",
+      "El trabajador no recibió el pago por días festivos.",
+      "El trabajador no recibió el pago por vacaciones.",
+      "El trabajador no recibió el pago por licencia."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpa por las molestias e informa que se a reportado el problema a recursos humanos y recibira una respuesta dentro de 3 dias. Si el problema no se puede resolver, comunicate con un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Demora en entrega",
+    "prioridad": [35, 64],
+    "contexto": [
+      "El paquete llegó más tarde de lo prometido.",
+      "El cliente no fue notificado sobre el retraso en la entrega.",
+      "El repartidor no llegó en la franja horaria acordada."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita el número de seguimiento del paquete, luego que el usuario haya dado el numero de seguimiento, verifica en el sistema el paquete, luego si el sistema encuentra el numero informa al usuario que se ha enviado un reporte al departamento de logistica. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Pérdida de paquete",
+    "prioridad": [65, 100],
+    "contexto": [
+      "El paquete no llegó a su destino y no hay información sobre su paradero.",
+      "El cliente reporta que el paquete fue entregado en una dirección incorrecta.",
+      "El cliente no recibió el paquete y no hay registro de entrega."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpa por las molestias y solicita el numero de seguimiento del paquete, luego verifica el tracking del paquete y su estado. Si se confirma la perdida del paquete, se inicia un proceso de reenvio del pedido o si no un reembolso si el cliente lo solicita. Si el usuario pide un reembolso, informa que se le enviara un correo con la confirmación del reembolso y que recibirá el dinero en un plazo de 3 a 5 días hábiles. Si no envia al usuario el nuevo numero de seguimiento del paquete. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Paquete dañado",
+    "prioridad": [35, 64],
+    "contexto": [
+      "El paquete llegó roto o en mal estado.",
+      "El contenido del paquete llegó dañado o defectuoso.",
+      "El paquete fue manipulado durante el transporte.",
+      "El paquete llegó con signos de haber sido abierto o alterado."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita el numero de seguimiento del paquete, luego solicita al usuario fotos del paquete. Si se confirma el daño del paquete, se inicia proceso de devolución o reemplazo del paquete y notifica el usuario que recibirá un correo con la confirmación del proceso de devolución o reemplazo. Si el usuario solicita un reembolso, informa que se le enviara un correo con la confirmación del reembolso y que recibirá el dinero en un plazo de 3 a 5 días hábiles. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Carga equivocada",
+    "prioridad": [65, 100],
+    "contexto": [
+      "El cliente recibió un paquete que no le pertenece.",
+      "El cliente recibió un paquete con productos equivocados.",
+      "El cliente recibió un paquete con productos que no solicitó."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpa por las molestias y solicita el numero de seguimiento del paquete. Si se confirma el paquete equivocado, inicia el proceso de devolución del paquete e informa que dentro de 3 dias se recogera el paquete. Si el usuario lo prefiere lo deriva a un ejecutivo de atención al cliente"
+  },
+  {
+    "tipo": "Robo de producto",
+    "prioridad": [65, 100],
+    "contexto": [
+      "El cliente o trabajador denuncia que el contenido fue robado durante el transporte.",
+      "El cliente reporta que el paquete llegó sin algunos productos.",
+      "El cliente reporta que el paquete llegó con productos faltantes.",
+      "El cliente reporta que el paquete llegó abierto"
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita detalles y evidencias como fotos y denuncia si aplica. Inicia el proceso de reclamo, informa que se enviara un correo con la confirmación del reclamo y que recibirá una respuesta en un plazo de 3 a 5 días hábiles. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Reembolso no procesado",
+    "prioridad": [65, 100],
+    "contexto": [
+      "Se solicitó un reembolso pero no fue emitido dentro del plazo.",
+      "El reembolso fue rechazado sin justificación clara.",
+      "El reembolso fue parcial cuando se esperaba total.",
+      "El reembolso no se reflejó en la cuenta del cliente."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas y solicita el numero de pedido. Verifica el estado del reembolso en el sistema. Si el reembolso esta pendiente o rechazado sin motivo o no se proceso genera un reclamo automatico, informa al usuario que se enviara un correo con la confirmación del reembolso y que recibirá una respuesta en un plazo de 3 a 5 días hábiles. Si el reembolso ya fue procesado, informa al usuario que el reembolso ya fue procesado y que recibirá el dinero en un plazo de 3 a 5 días hábiles. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Publicidad engañosa",
+    "prioridad": [0, 34],
+    "contexto": [
+      "El servicio prometido no coincide con lo que realmente se ofrece.",
+      "El cliente se siente engañado por las promociones o descuentos ofrecidos.",
+      "El cliente reporta que la calidad del servicio no es la anunciada.",
+      "El cliente reporta que el servicio no cumple con las expectativas creadas por la publicidad."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita detalles sobre la publicidad engañosa. Analiza los terminos de la oferta o promocion y verifica si se cumplio con lo prometido. Si se confirma la publicidad engañosa, informa al usuario que se enviara un correo con la confirmación del reclamo y que recibirá una respuesta en un plazo de 3 a 5 días hábiles. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Falta de seguimiento de paquete",
+    "prioridad": [35, 64],
+    "contexto": [
+      "No hay información actualizada sobre el estado del envío.",
+      "El cliente no puede rastrear su paquete en la aplicación o sitio web.",
+      "El cliente reporta que la información de seguimiento es incorrecta.",
+      "El cliente no recibe notificaciones sobre el estado del envío."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita el numero de seguimiento del paquete. Verifica el estado del paquete en el sistema. Si el paquete no tiene seguimiento, informa al usuario que se enviara un correo con la confirmación del reclamo y que recibirá una respuesta en un plazo de 3 a 5 días hábiles. Si el paquete posee seguimiento, informa al usuario el estado de seguimiento del pedido. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Atención al cliente deficiente",
+    "prioridad": [65, 100],
+    "contexto": [
+      "El soporte brindado no resolvió el problema o fue maleducado.",
+      "El cliente no recibió respuesta a su consulta en un plazo razonable.",
+      "El cliente reporta que la atención al cliente es difícil de contactar.",
+      "El cliente reporta que la atención al cliente no es útil o no entiende su problema."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita detalles sobre la atención al cliente deficiente. Luego Informa que se procesara el reclamo y se tomaran acciones sobre el caso y que recibirá una respuesta en un plazo de 3 a 5 días hábiles. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Horario no respetado",
+    "prioridad": [35, 64],
+    "contexto": [
+      "El repartidor no llegó en la franja horaria acordada.",
+      "El cliente no fue notificado sobre cambios en el horario de entrega.",
+      "El cliente reporta que el repartidor llegó antes o después de lo acordado.",
+      "El cliente reporta que el repartidor no respetó el horario de entrega acordado."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego pide disculpas y solicita el numero de seguimiento del paquete. Verifica el estado del paquete en el sistema. Si se confirma que el repartidor no respetó el horario y el paquete no fue entregado reprograma la entrega del paquete, si el paquete fue entregado entonces procesa el reclamo y dile al usuario que ya a sido ingresado su reclamo. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Error en facturación",
+    "prioridad": [35, 64],
+    "contexto": [
+      "Hay errores en el monto o ítems cobrados.",
+      "El cliente fue cobrado de más por un servicio o producto.",
+      "El cliente no recibió la factura correcta.",
+      "El cliente reporta que la factura no coincide con lo acordado."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego pide disculpas y solicita el numero de factura. Verifica en sistema. Si hay un error entonces ingresa reclamo e informa al usuario que recibira una respuesta dentro de 3 dias. Si no se confirma el error, informa al usuario que la factura es correcta y que no hay errores. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Aplicación no funcional",
+    "prioridad": [35, 64],
+    "contexto": [
+      "La app móvil presenta errores o no permite completar tareas.",
+      "El cliente no puede acceder a su cuenta en la aplicación.",
+      "El cliente reporta que la aplicación se cierra inesperadamente.",
+      "El cliente reporta que la aplicación no carga correctamente."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego solicita detalles sobre el problema con la aplicación. Si hay problemas con gps da pasos para solucionar el problema. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Producto no coincide con descripción",
+    "prioridad": [35, 64],
+    "contexto": [
+      "El cliente recibió algo distinto a lo prometido.",
+      "El cliente reporta que el producto no es lo que esperaba.",
+      "El cliente reporta que el producto no coincide con la descripción en la aplicación.",
+      "El cliente reporta que el producto no es de la calidad esperada."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita detalles sobre el producto recibido. Si el producto no coincide con la descripción, inicia el proceso de devolución o reemplazo del producto e informa que recibirá un correo con la confirmación del proceso de devolución o reemplazo. Si el usuario solicita un reembolso, informa que se le enviara un correo con la confirmación del reembolso y que recibirá el dinero en un plazo de 3 a 5 días hábiles. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Contratación no autorizada",
+    "prioridad": [35, 64],
+    "contexto": [
+      "El cliente fue inscrito en un servicio sin su consentimiento.",
+      "El cliente reporta que se le cobró por una suscripción que no solicitó.",
+      "El cliente no puede cancelar una suscripción no deseada.",
+      "El cliente reporta que la suscripción se renovó automáticamente sin aviso."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita detalles sobre la contratación no autorizada. Si se confirma la contratación no autorizada, inicia el proceso de cancelación de la suscripción e informa que recibirá un correo con la confirmación de la cancelación. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Cancelación sin aviso",
+    "prioridad": [35, 64],
+    "contexto": [
+      "El servicio o pedido fue cancelado sin comunicación previa.",
+      "El cliente reporta que su pedido fue cancelado sin explicación.",
+      "El cliente reporta que la empresa canceló su pedido sin previo aviso.",
+      "El cliente reporta que la empresa no le notificó sobre la cancelación de su pedido."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, solicita el numero del pedido. Verifica el estado del pedido. Si fue cancelado eplica el motivo de la cancelación y ofrece una solución, como un reembolso o un nuevo pedido.Si no fue cancelado, informa al usuario del estado de su pedido. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Servicio técnico ineficaz",
+    "prioridad": [65, 100],
+    "contexto": [
+      "El cliente reporta que el servicio técnico no resolvió su problema.",
+      "El cliente no recibió asistencia técnica cuando la solicitó.",
+      "El cliente reporta que el servicio técnico es difícil de contactar.",
+      "El cliente reporta que el servicio técnico no entiende su problema."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide detalles del problema con el servicio tecnico. Ofrece agendar una nueva cita con el servicio técnico o escalar el problema a un supervisor. Informa al usuario que recibirá una respuesta en un plazo de 3 a 5 días hábiles. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Cambio de condiciones sin aviso",
+    "prioridad": [35, 64],
+    "contexto": [
+      "El cliente reporta que las condiciones del servicio cambiaron sin previo aviso.",
+      "El cliente no fue notificado sobre cambios en las políticas de servicio.",
+      "El cliente reporta que la empresa cambió las condiciones de su servicio sin avisar.",
+      "El cliente reporta que las condiciones del servicio no son las mismas que al momento de la contratación."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita detalles sobre el cambio de condiciones. Si se confirma el cambio de condiciones sin aviso, explica al usuario sobre las nuevas condiciones y no volvera a ocurrir de nuevo dicho problema. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Cobro adicional no informado",
+    "prioridad": [35, 64],
+    "contexto": [
+      "El cliente fue cobrado por un servicio adicional no solicitado.",
+      "El cliente reporta que se le cobró un monto extra sin explicación.",
+      "El cliente reporta que el cobro adicional no fue informado previamente.",
+      "El cliente reporta que el cobro adicional no está justificado."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, solicita el numero de cobro en el sistema. Verifica el cobro adicional en el sistema. Si se confirma el cobro adicional no informado, inicia el proceso de reclamo e informa que recibirá una respuesta en un plazo de 3 a 5 días hábiles. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Facturación duplicada",
+    "prioridad": [65, 100],
+    "contexto": [
+      "Se cobró más de una vez por el mismo servicio.",
+      "El cliente reporta que se le cobró dos veces por el mismo pedido.",
+      "El cliente reporta que la empresa le cobró dos veces por el mismo servicio.",
+      "El cliente reporta que la empresa no le reembolsó el cobro duplicado."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas y Solicita comprobante o numero de factura. Verifica el sistema para confirmar el cobro duplicado. Si se confirma el cobro duplicado, inicia el proceso de reembolso e informa que recibirá un correo con la confirmación del reembolso y que recibirá el dinero en un plazo de 3 a 5 días hábiles. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Promesa de entrega incumplida",
+    "prioridad": [35, 64],
+    "contexto": [
+      "Se prometió una entrega rápida o especial que no se cumplió.",
+      "El cliente reporta que la empresa no cumplió con la promesa de entrega.",
+      "El cliente reporta que la empresa no cumplió con el plazo de entrega acordado.",
+      "El cliente reporta que la empresa no cumplió con la entrega en el tiempo prometido."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita el numero de seguimiento del paquete. Verifica el estado del paquete en el sistema. Si se confirma que la entrega no se cumplió, informa al usuario que se reportara el caso y que no volvera a ocurrir, luego informa la nueva fecha de entrega. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Gigworker no apareció",
+    "prioridad": [65, 100],
+    "contexto": [
+      "El repartidor no se presentó para recoger o entregar el paquete.",
+      "El cliente reporta que el repartidor no llegó a la dirección acordada.",
+      "El cliente reporta que el repartidor no se presentó en el horario acordado.",
+      "El cliente reporta que el repartidor no cumplió con su compromiso de entrega."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita el numero de seguimiento del paquete. Verifica el estado del paquete en el sistema. Si se confirma que el repartidor no se presentó, informa al usuario que se reportara el caso y que no volvera a ocurrir, luego informa la nueva fecha de entrega con un nuevo repartidor. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Gigworker actuó de forma inapropiada",
+    "prioridad": [65, 100],
+    "contexto": [
+      "El repartidor mostró una actitud grosera o poco profesional.",
+      "El cliente reporta que el repartidor fue irrespetuoso o maleducado.",
+      "El cliente reporta que el repartidor no siguió las instrucciones de entrega.",
+      "El cliente reporta que el repartidor no cumplió con las normas de conducta esperadas."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita detalles sobre el comportamiento inapropiado del repartidor. Informa al usuario que se tomaran acciones disciplinarias contra el repartidor y que no volvera a ocurrir y que dentro de 3 dias recibira respuesta del caso. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Retraso en pagos a gigworker",
+    "prioridad": [65, 100],
+    "contexto": [
+      "El repartidor no recibe sus pagos en el tiempo establecido.",
+      "El repartidor reporta que su pago fue retrasado sin justificación.",
+      "El repartidor reporta que no recibió el pago por su trabajo.",
+      "El repartidor reporta que la empresa no le pagó por sus servicios."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita el numero de identificación del repartidor. Verifica el estado del pago en el sistema. Si se confirma el retraso en el pago, explica el motivo del retraso e inicia el proceso de reclamo e informa que recibirá una respuesta en un plazo de 3 a 5 días hábiles. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Error en dirección de entrega",
+    "prioridad": [35, 64],
+    "contexto": [
+      "La dirección proporcionada es incorrecta o incompleta.",
+      "El cliente reporta que la dirección de entrega no es la correcta.",
+      "El cliente reporta que el repartidor no encontró la dirección de entrega.",
+      "El cliente reporta que la empresa no verificó la dirección de entrega antes de enviar el paquete."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, Solicita al usuario el numero de pedido y la dirección correcta. Verifica el estado del paquete en el sistema. Si se confirma que la dirección es incorrecta, informa al usuario que se corregirá la dirección y se reprogramará la entrega. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Rechazo de devolución injustificado",
+    "prioridad": [35, 64],
+    "contexto": [
+      "El cliente no puede devolver un producto que debería ser aceptado.",
+      "El cliente reporta que la empresa no acepta su solicitud de devolución.",
+      "El cliente reporta que la empresa no le permite devolver el producto.",
+      "El cliente reporta que la empresa no respeta su derecho a la devolución."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita detalles sobre la devolución rechazada. Si se confirma que la devolución fue rechazada injustificadamente verificando las politicas, inicia el proceso de reclamo e informa que recibirá una respuesta en un plazo de 3 a 5 días hábiles. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Paquete entregado a persona incorrecta",
+    "prioridad": [65, 100],
+    "contexto": [
+      "El paquete fue entregado a alguien que no es el destinatario.",
+      "El cliente reporta que su paquete fue entregado a otra persona.",
+      "El cliente reporta que el repartidor entregó el paquete a una dirección equivocada.",
+      "El cliente reporta que la empresa no verificó la identidad del destinatario antes de entregar el paquete."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita el numero de seguimiento del paquete. Verifica el estado del paquete en el sistema. Si se confirma que el paquete fue entregado a la persona incorrecta, inicia el proceso de reclamo e informa que recibirá una respuesta en un plazo de 3 a 5 días hábiles. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Falta de contacto previo a la entrega",
+    "prioridad": [35, 64],
+    "contexto": [
+      "El cliente no fue notificado antes de la entrega.",
+      "El repartidor no se comunicó con el cliente antes de llegar.",
+      "El cliente reporta que no recibió aviso previo de la entrega.",
+      "El cliente reporta que la empresa no le informó sobre la entrega con anticipación."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y eplica el proceso estandar de seguimiento de entrega. Informa al cliente que se mejorara la comunicación para futuras entregas y su reporte sera tomado en cuenta. Genera reporte del caso. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Demora en atención telefónica",
+    "prioridad": [35,64],
+    "contexto": [
+      "El cliente tuvo que esperar mucho tiempo para ser atendido por teléfono.",
+      "El cliente reporta que la línea de atención al cliente está saturada.",
+      "El cliente reporta que no pudo comunicarse con el servicio de atención al cliente por teléfono.",
+      "El cliente reporta que la empresa no responde a sus llamadas."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita detalles sobre la demora en la atención telefónica. Informa al usuario que se tomaran acciones para mejorar el servicio de atención al cliente y que recibirá una respuesta en un plazo de 3 a 5 días hábiles. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Pérdida de incentivos",
+    "prioridad": [35, 64],
+    "contexto": [
+      "El trabajador no recibió bonificaciones o incentivos prometidos.",
+      "El cliente reporta que la empresa no cumplió con los incentivos ofrecidos.",
+      "El cliente reporta que la empresa no respeta los acuerdos de incentivos.",
+      "El cliente reporta que la empresa no paga los incentivos acordados."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita detalles sobre los incentivos no recibidos. Si se confirma que los incentivos no fueron pagados, inicia el proceso de reclamo e informa que recibirá una respuesta en un plazo de 3 a 5 días hábiles y si se confirma el pago recibira los incentivos en un tiempo estimado de una semana. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Descuento no aplicado",
+    "prioridad": [35, 64],
+    "contexto": [
+      "El cliente esperaba un descuento que no se aplicó en su compra.",
+      "El cliente reporta que el descuento no se reflejó en su factura.",
+      "El cliente reporta que la empresa no aplicó el descuento prometido.",
+      "El cliente reporta que la empresa no respetó el acuerdo de descuento."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita detalles sobre el descuento no aplicado. Si se confirma que el descuento no fue aplicado, inicia el proceso de reembolso e informa que recibirá una respuesta en un plazo de 3 a 5 días hábiles. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Pedido incompleto",
+    "prioridad": [35, 64],
+    "contexto": [
+      "El cliente recibió un pedido con productos faltantes.",
+      "El cliente reporta que no recibió todos los productos solicitados.",
+      "El cliente reporta que la empresa no cumplió con su pedido completo.",
+      "El cliente reporta que la empresa no verificó su pedido antes de enviarlo."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita fotos de los productos. verifica el pedido en el sistema. Si el pedido esta incompleto, ofrece enviar los productos faltante o reembolsar la diferencia. Si el usuario confirma reenviar productos, informa que recibirá un correo con la confirmación del reenvío y que recibirá los productos en un plazo de 3 a 5 días hábiles. Si el usuario prefiere reembolso, informa que se le enviara un correo con la confirmación del reembolso y que recibirá el dinero en un plazo de 3 a 5 días hábiles. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Maltrato por parte del cliente",
+    "prioridad": [35, 64],
+    "contexto": [
+      "El trabajador reporta que fue tratado de manera inapropiada por un cliente.",
+      "El trabajador reporta que el cliente fue grosero o agresivo.",
+      "El trabajador reporta que el cliente no respetó las normas de conducta.",
+      "El trabajador reporta que el cliente no siguió las instrucciones de entrega."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita detalles sobre el maltrato recibido. Informa al usuario que se tomaran acciones disciplinarias contra el cliente y que no volvera a ocurrir y que dentro de 3 dias recibira respuesta del caso.Da soporte emocional siendo empatico y amable con el usuario. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Sistema de evaluación de contratación injusto",
+    "prioridad": [35, 64],
+    "contexto": [
+      "El trabajador reporta que el sistema de evaluación no refleja su desempeño real.",
+      "El trabajador reporta que el sistema de evaluación es sesgado o injusto.",
+      "El trabajador reporta que la empresa no proporciona retroalimentación clara sobre su desempeño.",
+      "El trabajador reporta que la empresa no respeta los criterios de evaluación acordados."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita detalles del caso sobre el sistema de evaluación. Si se confirma que el sistema de evaluación es injusto, informa al usuario que se revisará su caso y se tomaran acciones para mejorar el sistema de evaluación. Informa al usuario que recibirá una respuesta en un plazo de 3 a 5 días hábiles. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Política de devolución confusa",
+    "prioridad": [35, 64],
+    "contexto": [
+      "El cliente no entiende las condiciones para devolver un producto.",
+      "El cliente reporta que la política de devolución es ambigua o complicada.",
+      "El cliente reporta que la empresa no proporciona información clara sobre las devoluciones.",
+      "El cliente reporta que la empresa no respeta su derecho a la devolución."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita detalles sobre la política de devolución confusa. Explica al usuario las condiciones de devolución de manera clara y concisa. Si el usuario tiene dudas adicionales, ofrece asistencia personalizada para resolver sus inquietudes. Informa al usuario que se tomaran acciones para mejorar la claridad de la política de devolución. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Errores frecuentes en la app",
+    "prioridad": [35, 64],
+    "contexto": [
+      "La aplicación presenta fallos recurrentes que afectan la experiencia del usuario.",
+      "El cliente reporta que la aplicación no funciona correctamente.",
+      "El cliente reporta que la aplicación tiene errores que impiden su uso.",
+      "El cliente reporta que la empresa no soluciona los problemas de la aplicación."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita detalles sobre los errores en la aplicación. Si hay problemas con gps da pasos para solucionar el problema. Si es por problemas de entendimiento de la app indica pasoss basicos de solución. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Paquete entregado fuera del rango horario",
+    "prioridad": [35, 64],
+    "contexto": [
+      "El cliente reporta que el paquete fue entregado fuera del horario acordado.",
+      "El cliente reporta que el repartidor llegó antes o después de lo pactado.",
+      "El cliente reporta que la empresa no respetó el rango horario de entrega acordado.",
+      "El cliente reporta que la empresa no cumplió con el horario de entrega establecido."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita el numero de seguimiento del paquete. Verifica el estado del paquete en el sistema. Si se confirma que la entrega se realizó fuera del horario acordado, informa al usuario que se reportara el caso y que no volvera a ocurrir, luego informa la nueva fecha de entrega si el paquete no ha sido entregado. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Datos personales expuestos",
+    "prioridad": [65, 100],
+    "contexto": [
+      "El cliente reporta que su información personal fue compartida sin su consentimiento.",
+      "El cliente reporta que la empresa no protege adecuadamente sus datos personales.",
+      "El cliente reporta que la empresa no cumple con las normativas de protección de datos.",
+      "El cliente reporta que la empresa no respeta su privacidad."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita detalles sobre la exposición de sus datos personales. Informa al usuario que se tomaran acciones para proteger sus datos y que se revisará el caso a la brevedad. Informa al usuario que recibirá una respuesta en un plazo de 3 a 5 días hábiles. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Retiro programado no realizado",
+    "prioridad": [35, 64],
+    "contexto": [
+      "El cliente programó un retiro de paquete que no se llevó a cabo.",
+      "El cliente reporta que el repartidor no llegó a recoger el paquete en la fecha acordada.",
+      "El cliente reporta que la empresa no cumplió con el retiro programado.",
+      "El cliente reporta que la empresa no respetó la cita de retiro acordada."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita el numero de seguimiento del paquete. Verifica el estado del paquete en el sistema. Si se confirma que el retiro programado no se realizó, informa al usuario que se reprogramará el retiro y que recibirá una nueva fecha de retiro y que disculpe las molestias y que no volvera a ocurrir en el futuro. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Falta de instrucciones para entrega",
+    "prioridad": [35, 64],
+    "contexto": [
+      "El cliente no recibió instrucciones claras sobre cómo se realizaría la entrega.",
+      "El cliente reporta que la empresa no proporcionó información sobre el proceso de entrega.",
+      "El cliente reporta que la empresa no explicó cómo se llevaría a cabo la entrega.",
+      "El cliente reporta que la empresa no respetó las instrucciones de entrega acordadas."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita detalles sobre las instrucciones de entrega faltantes. Informa al usuario que se mejorará la comunicación de las instrucciones de entrega para futuras entregas y que se tomaran acciones para evitar que vuelva a ocurrir, adema proporciona instrucciones claras para ayudar al usuario a comprender las instrucciones. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Cambio de ruta sin notificación",
+    "prioridad": [35, 64],
+    "contexto": [
+      "El repartidor cambió la ruta de entrega sin informar al cliente.",
+      "El cliente reporta que el repartidor tomó una ruta diferente a la acordada.",
+      "El cliente reporta que la empresa no notificó sobre cambios en la ruta de entrega.",
+      "El cliente reporta que la empresa no respetó la ruta de entrega acordada."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita el numero de seguimiento del paquete. Verifica el estado del paquete en el sistema. Si se confirma que la ruta de entrega fue cambiada sin notificación, informa al usuario que se reportara el caso y que no volvera a ocurrir, luego informa la nueva ruta de entrega si es necesario. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Retraso por condiciones climáticas no informadas",
+    "prioridad": [35, 64],
+    "contexto": [
+      "El cliente no fue informado sobre retrasos debido a mal tiempo.",
+      "El cliente reporta que la empresa no notificó sobre condiciones climáticas que afectaron la entrega.",
+      "El cliente reporta que la empresa no respetó las condiciones climáticas al programar la entrega.",
+      "El cliente reporta que la empresa no cumplió con las condiciones climáticas acordadas para la entrega."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita el numero de seguimiento del paquete. Verifica el estado del paquete en el sistema. Si se confirma que hubo un retraso por condiciones climáticas no informadas, informa al usuario que se reportara el caso y que no volvera a ocurrir, luego informa la nueva fecha de entrega. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Rechazo de paquete sin causa válida",
+    "prioridad": [35, 64],
+    "contexto": [
+      "El cliente no aceptó un paquete sin una razón justificada.",
+      "El cliente reporta que el repartidor rechazó el paquete sin explicación.",
+      "El cliente reporta que la empresa no respetó las condiciones de aceptación del paquete.",
+      "El cliente reporta que la empresa no cumplió con las normas de rechazo de paquetes."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita detalles sobre el rechazo del paquete. Si se confirma que el paquete fue rechazado sin una causa válida, informa al usuario que se reportara el caso y que no volvera a ocurrir, luego informa la nueva fecha de entrega si es necesario. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Problemas con sistema de GPS",
+    "prioridad": [35, 64],
+    "contexto": [
+      "El repartidor no pudo encontrar la dirección debido a fallos en el GPS.",
+      "El cliente reporta que el GPS no proporciona direcciones precisas.",
+      "El cliente reporta que la empresa no verifica las direcciones antes de enviar al repartidor.",
+      "El cliente reporta que la empresa no respeta las coordenadas de entrega acordadas."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y detecta fallos en localización. Si se confirman los fallos solicita o da referencias alternativas, ajusta ruta y coordina entrega manualmente. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Comunicación deficiente con gigworker",
+    "prioridad": [35, 64],
+    "contexto": [
+      "El cliente no pudo comunicarse con el repartidor durante el proceso de entrega.",
+      "El cliente reporta que el repartidor no responde a sus mensajes o llamadas.",
+      "El cliente reporta que la empresa no facilita la comunicación con el repartidor.",
+      "El cliente reporta que la empresa no respeta los canales de comunicación acordados."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita detalles sobre la falta de comunicación con el repartidor. Informa al usuario que se mejorará la comunicación entre el cliente y el repartidor para futuras entregas y que se tomaran acciones para evitar que vuelva a ocurrir y propone alternativas de comunicación si es necesario. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Confusión en tarifas",
+    "prioridad": [0, 34],
+    "contexto": [
+      "El cliente no entiende las tarifas aplicadas a su pedido.",
+      "El cliente reporta que las tarifas no fueron explicadas claramente.",
+      "El cliente reporta que la empresa no proporciona información sobre las tarifas.",
+      "El cliente reporta que la empresa no respeta las tarifas acordadas."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita detalles sobre la confusión en las tarifas. Explica al usuario las tarifas aplicadas de manera clara y concisa. Si el usuario tiene dudas adicionales, ofrece asistencia personalizada para resolver sus inquietudes. Informa al usuario que se tomaran acciones para mejorar la claridad de las tarifas. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Gigworker se negó a entregar",
+    "prioridad": [65, 100],
+    "contexto": [
+      "El repartidor se negó a entregar el paquete sin una razón válida.",
+      "El cliente reporta que el repartidor no quiso entregar el paquete.",
+      "El cliente reporta que la empresa no respeta las condiciones de entrega acordadas.",
+      "El cliente reporta que la empresa no cumplió con las normas de entrega establecidas."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita el numero de seguimiento del paquete. Verifica el estado del paquete en el sistema. Si se confirma que el repartidor se negó a entregar el paquete sin una razón válida, informa al usuario que se reportara el caso y que no volvera a ocurrir, luego informa la nueva fecha de entrega si es necesario. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Documentación incompleta",
+    "prioridad": [35, 64],
+    "contexto": [
+      "El cliente no recibió toda la documentación necesaria para su pedido.",
+      "El cliente reporta que la empresa no proporcionó los documentos requeridos.",
+      "El cliente reporta que la empresa no respeta los requisitos de documentación acordados.",
+      "El cliente reporta que la empresa no cumplió con las normas de documentación establecidas."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita detalles sobre la documentación incompleta. Si se confirma que la documentación es incompleta, inicia el proceso de envío de los documentos faltantes e informa que recibirá un correo con la confirmación del envío. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "Problemas de garantía",
+    "prioridad": [35, 64],
+    "contexto": [
+      "El cliente no puede hacer efectiva la garantía de un producto.",
+      "El cliente reporta que la empresa no respeta las condiciones de garantía acordadas.",
+      "El cliente reporta que la empresa no proporciona información clara sobre la garantía.",
+      "El cliente reporta que la empresa no cumple con las normas de garantía establecidas."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego pide disculpas por las molestias y solicita detalles sobre el problema con la garantía. Si se confirma que la garantía no fue respetada, inicia el proceso de reclamo e informa que recibirá una respuesta en un plazo de 3 a 5 días hábiles. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  },
+  {
+    "tipo": "otros",
+    "prioridad": [0, 34],
+    "contexto": [
+      "El cliente reporta un problema que no encaja en las categorías anteriores.",
+      "El cliente reporta un inconveniente que no está claramente definido en las categorías existentes."
+    ],
+    "respuesta": "Se empatico con el usuario y solicita datos al usuario como nombre y numero de contacto. Luego, pide disculpas por las molestias y solicita detalles sobre el problema reportado. Si el problema es claro, intenta resolverlo siguiendo los pasos adecuados. Si no puedes solucionar el problema o si el problema es ambiguo, informa al usuario que se escalará el caso a un supervisor para una revisión más detallada y que recibirá una respuesta en un plazo de 3 a 5 días hábiles. Si no puedes solucionar el problema llama a un ejecutivo de atención al cliente."
+  }
+]
